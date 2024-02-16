@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Authentication Example</title>
+  </head>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.5rem;
+      background-color: #f1f1f1;
+    }
+    div#loginForm {
+      width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.5rem;
+      background: #fafafa;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      height: 30px;
+    }
+    button {
+      border: none;
+      cursor: pointer;
+      padding: 8px 4px;
+      border-radius: 8px;
+      width: 60%;
+      color: white;
+      background-color: #a71319;
+    }
+    #user {
+      font-weight: bold;
+      font-size: 20px;
+      color: #a71319;
+    }
+    #loggedIn p {
+      margin-bottom: 1rem;
+    }
+  </style>
+
+  <body>
+    <h1>User Authentication Example</h1>
+
+    <div id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="loggedIn" style="display: none">
+      <p>Welcome, <span id="user"></span>!</p>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="./app.js"></script>
+
+
+  </body>
+</html>
